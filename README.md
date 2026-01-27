@@ -33,6 +33,8 @@ ISATSleepNet is trained and evaluated via cross-validation.
 ```
 python "./ISATSleepNet.py" --log_dir  "path/to/log" --data_folder_train  "path/to/augment_dataset" --data_folder_test  "path/to/original_dataset" --fold_dir  "path/to/fold/record"  --start_fold  start_number --device_ids  GPU_index --num_epoch  epoch_number
 ```
+To validate the effectiveness of the proposed method, we compared our model with several representative sleep staging approaches based on CNN, RNN, and Transformer architectures. The comparison results are shown below.
+![](https://github.com/JiangZaiUp/ISATSleepNet/blob/main/images/Performance%20Comparison%20Between%20Previous%20Works%20on%20the%20Experimental%20Databases.png)
 ## Test and Visualization
 To evaluate the model qualitatively, the predicted hypnogram is visualized and compared with the ground truth.
 ```
