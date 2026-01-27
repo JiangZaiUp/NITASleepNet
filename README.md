@@ -26,6 +26,8 @@ After training Physio-GAN, it can be used to augment the dataset.
 ```
 python "./augment_with_gan.py" --data_dir  "path/to/dataset" --ann_dir  "path/to/label" --output_dir  "path/to/augment_dataset"  --select_ch  "EEG/EOG" --gan_model_dir  "path/to/Physio-GAN" 
 ```
+Comparison of real and Physio-GAN–synthesized signals in the time domain and power spectral density (PSD).
+![](https://github.com/JiangZaiUp/ISATSleepNet/blob/main/images/Comparison%20of%20real%20and%20generated%20samples.png)
 ## Train and Validate ISATSleepNet
 ISATSleepNet is trained and evaluated via cross-validation.
 ```
@@ -36,3 +38,5 @@ To evaluate the model qualitatively, the predicted hypnogram is visualized and c
 ```
 python "./ISATSleepNet_test.py" --model_path  "path/to/ISATSleepNet" --npz_file_path  "path/to/npz_file" --output_dir  "path/to/save_directory" --device  GPU_index
 ```
+A randomly selected subject from the SHHS dataset was used for sleep staging, and the resulting hypnogram is shown below.
+![](https://github.com/JiangZaiUp/ISATSleepNet/blob/main/images/True%20and%20predicted%20hypnogram.png)
