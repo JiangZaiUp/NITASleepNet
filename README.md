@@ -14,7 +14,8 @@ The datasets used in this project are publicly available:
 - Sleep-EDF-20, Sleep-EDF-78:
 https://physionet.org/content/sleep-edfx/1.0.0/
 - SHHS:
-https://sleepdata.org/datasets/shhs/
+https://sleepdata.org/datasets/shhs/  
+https://www.kaggle.com/datasets/chaimahannachi/shhs2-apnea  
 Please download the datasets in advance and organize the data paths according to your local environment.
 ## Train Physio-GAN
 Physio-GAN is used to generate physiologically plausible EEG/EOG signals for data augmentation.
