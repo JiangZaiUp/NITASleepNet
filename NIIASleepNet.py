@@ -424,9 +424,9 @@ class EOGFeatureExtractor(nn.Module):
         out = out.permute(0, 2, 1)            
         return out
 
-class CNNSleepLSTMModel(nn.Module):
+class NIIASleepNet(nn.Module):
     def __init__(self, d_model=128, num_classes=5, lstm_layers=2, dropout=0.5):
-        super(CNNSleepLSTMModel, self).__init__()
+        super(NIIASleepNet, self).__init__()
 
         self.eeg_cnn = nn.Sequential(
             MultiScaleBlock(1, 32),
@@ -822,7 +822,7 @@ if __name__ == "__main__":
     val_loader = DataLoader(val_dataset, batch_size=16, shuffle=False)
 
     
-    model = CNNSleepLSTMModel(d_model=128, num_classes=5, lstm_layers=2, dropout=0.5)
+    model = NIIASleepNet(d_model=128, num_classes=5, lstm_layers=2, dropout=0.5)
     model = torch.nn.DataParallel(model, device_ids=device_ids)
     model.to(device)
 
